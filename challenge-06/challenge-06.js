@@ -34,7 +34,7 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
 */
 var showTeamPosition = function(arg,x){
  
-    if(x <= 5){
+    if( x < 1 || x < 5){
 
     return "O time que está em " + (x + 1) + " lugar é o "+ arg[x] +".";
 
