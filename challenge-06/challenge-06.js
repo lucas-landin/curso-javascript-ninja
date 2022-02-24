@@ -118,8 +118,9 @@ console.log(convertToHex("vermelho"));
 console.log(convertToHex("amarelo"));
 console.log(convertToHex("roxo"));
 
-
-
-
-
+let num = 0
+while(num <= 20){
+num % 2 === 0 ? console.log(num): " ";
+num++
+};
 
