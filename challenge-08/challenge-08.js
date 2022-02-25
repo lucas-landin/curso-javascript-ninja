@@ -34,14 +34,14 @@ function showName(){
 /*
 Declare uma variável chamada `varShowName` que recebe a função criada acima.
 */
-var varShowName = showName.name
+var varShowName = showName
 
 /*
 Usando a variável criada acima, mostre no console o nome e o retorno da função
 atribuída a ela, com a seguinte frase:
 "A função [NOME DA FUNÇÃO] retorna [RETORNO DA FUNÇÃO]."
 */
-console.log("A função " + varShowName + " retorna " + showName() + ".")
+console.log("A função " + varShowName.name + " retorna " + showName() + ".")
 
 /*
 Crie uma função literal chamada `calculator`, que funcione assim:
@@ -109,6 +109,7 @@ var subtracao = calculadora("-");
 var multiplicacao = calculadora("*");
 var divisao = calculadora("/");
 var modulo = calculadora("%");
+
 
 
 /*
