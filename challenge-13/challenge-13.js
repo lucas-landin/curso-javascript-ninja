@@ -110,7 +110,7 @@ brasil.forEach(function(item, index,){
 Mostre o array `newBrasil` no console
 */
 console.log( '\nnewBrasil:' );
-console.log(newBrasil)
+console.log(newBrasil);
 
 /*
 Percorra o array `brasil` e verifique se os estados tem mais de 7 letras cada,
