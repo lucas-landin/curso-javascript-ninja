@@ -1,4 +1,4 @@
-(function(win,docu){
+(function(win,doc){
     
 'use strict';
 
@@ -19,17 +19,15 @@ usar o nome que achar melhor, desde que ele seja semântico, ou seja, o nome
 dado ao elemento HTML deve definir o que o elemento é ou o que ele faz.
 */
 
-var $buttonStart = docu.querySelector('[data-js = buttonStart]')
-var contador = 0
-var $inputCronometro = docu.querySelector('[data-js = cronometro]')
 
-$inputCronometro.value = contador
+var $buttonStart = doc.querySelector('[data-js = buttonStart]')
+var contador = 0
+var $inputCronometro = doc.querySelector('[data-js = cronometro]')
+
+$inputCronometro.value = 0
 
 $buttonStart.addEventListener('click',function(event){
     event.preventDefault()
     
 })
-var lucas = 'funciona'
-console.log(lucas)
-
 })(window,document);
