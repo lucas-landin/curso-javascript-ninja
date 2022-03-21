@@ -131,5 +131,4 @@ Alguns e-mails inválidos:
 function isValidEmail(email){
 return /^[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$/gm.test(email)
 };
-
 })(window,document);
