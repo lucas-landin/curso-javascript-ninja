@@ -23,25 +23,28 @@ dado ao elemento HTML deve definir o que o elemento é ou o que ele faz.
 var $buttonStart = doc.querySelector('[data-js = buttonStart]')
 var $buttonStop = doc.querySelector('[data-js = buttonStop]')
 var $buttonReset = doc.querySelector('[data-js = buttonReset]')
-var contador = 0
 var $inputCronometro = doc.querySelector('[data-js = cronometro]')
 var temporizador;
-$inputCronometro.value = contador
 
-$buttonStart.addEventListener('click',function(){
-    function timer (){
-  $inputCronometro.value = contador++
-  temporizador = setTimeout(timer,1000)
-    }
-    timer()
-}, false);
 
-$buttonStop.addEventListener('click',function(){
-  clearTimeout(temporizador)
-}, false);
+$buttonStart.addEventListener('click', timer ,false);
 
-$buttonReset.addEventListener('click',function(){
-    contador = 0
-},false)
+function timer (){
+    $inputCronometro.value = +$inputCronometro.value + 1
+    temporizador = setTimeout(timer,1000)
+      }
+
+$buttonStop.addEventListener('click', pare ,false);
+
+function pare (){
+    clearTimeout(temporizador);
+}
+
+$buttonReset.addEventListener('click',reset ,false)
+
+function reset (){
+    $inputCronometro.value = 0;
+    pare();
+}
 
 })(window,document);
