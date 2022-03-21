@@ -28,8 +28,7 @@ var $inputCronometro = doc.querySelector('[data-js = cronometro]')
 var temporizador;
 $inputCronometro.value = contador
 
-$buttonStart.addEventListener('click',function(event){
-    event.preventDefault()
+$buttonStart.addEventListener('click',function(){
     function timer (){
   $inputCronometro.value = contador++
   temporizador = setTimeout(timer,1000)
@@ -37,8 +36,7 @@ $buttonStart.addEventListener('click',function(event){
     timer()
 }, false);
 
-$buttonStop.addEventListener('click',function(event){
-  event.preventDefault()
+$buttonStop.addEventListener('click',function(){
   clearTimeout(temporizador)
 }, false);
 
