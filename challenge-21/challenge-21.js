@@ -1,5 +1,6 @@
-(function(doc){
- 'use strict';
+(function(win,docu){
+    
+'use strict';
 
 /*
 O desafio de hoje será um pequeno projeto: um cronômetro!
@@ -18,9 +19,10 @@ usar o nome que achar melhor, desde que ele seja semântico, ou seja, o nome
 dado ao elemento HTML deve definir o que o elemento é ou o que ele faz.
 */
 
-var $buttonStart = doc.querySelector('[data-js = buttonStart]')
+var $buttonStart = docu.querySelector('[data-js = buttonStart]')
 var contador = 0
-var $inputCronometro = doc.querySelector('[data-js = cronometro]')
+var $inputCronometro = docu.querySelector('[data-js = cronometro]')
+
 $inputCronometro.value = contador
 
 $buttonStart.addEventListener('click',function(event){
@@ -28,6 +30,6 @@ $buttonStart.addEventListener('click',function(event){
     
 })
 var lucas = 'funciona'
-console.log(lucas
-    )
-})(document);
+console.log(lucas)
+
+})(window,document);
