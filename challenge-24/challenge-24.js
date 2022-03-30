@@ -12,6 +12,14 @@ listeners de eventos, etc);
 - faça refactories para melhorar esse código, mas de forma que o mantenha com a
 mesma funcionalidade.
 */
+
+var $visor = doc.querySelector('[data-js="visor"]');
+var $buttonsNumbers = doc.querySelectorAll('[data-js="button-strig"]');
+var $buttonsOperations = doc.querySelectorAll('[data-js="button-operation"]');
+var $buttonCE = doc.querySelector('[data-js="button-ce"]');
+var $buttonEqual = doc.querySelector('[data-js="button-equal"]');
+
+
 function initialize(){
 initEvets()
 }
@@ -27,14 +35,6 @@ function initEvets(){
   $buttonEqual.addEventListener('click', handleClickEqual, false);
 
 };
-
-
-var $visor = doc.querySelector('[data-js="visor"]');
-var $buttonsNumbers = doc.querySelectorAll('[data-js="button-strig"]');
-var $buttonsOperations = doc.querySelectorAll('[data-js="button-operation"]');
-var $buttonCE = doc.querySelector('[data-js="button-ce"]');
-var $buttonEqual = doc.querySelector('[data-js="button-equal"]');
-
 
 function handleClickNumber() {
   $visor.value += this.value;
