@@ -1,3 +1,6 @@
+(function(win,doc){
+
+
 /*
 O desafio dessa semana é criar uma mini library (biblioteca) para
 reutilizarmos nossos códigos quando fizermos manipulação de DOM!
@@ -19,13 +22,31 @@ selecionados.
 Dica: olhe os erros que acontecem no console, e vá resolvendo um a um.
 Só passe para o próximo problema quando tiver resolvido o anterior :)
 */
-// ?
+function DOM(element){
+  this.element = document.querySelectorAll(element)
+}
+
+DOM.prototype.on = function on(eventType,callBack){
+  Array.prototype.forEach.call(this.element,function(element){
+    return element.addEventListener(eventType,callBack,false)
+  })
+};
+
+DOM.prototype.off = function off(eventType,callBack){
+  Array.prototype.forEach.call(this.element,function(element){
+    return element.removeEventListener(eventType,callBack,false)
+  })
+};
+DOM.prototype.get = function get(){
+  return this.element
+};
 
 var $a = new DOM('[data-js="link"]');
-$a.on('click', function(e) {
+$a.on('click', function handleClick (e) {
   e.preventDefault();
   console.log('clicou');
 });
 
 console.log('Elementos selecionados:', $a.get());
 console.log('$a é filho de body?', $a.get()[0].parentNode === document.body);
+})(window,document);
